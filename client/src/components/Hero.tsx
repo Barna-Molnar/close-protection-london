@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/stock_images/professional_bodygua_c04872fe.jpg";
+import heroImage from "@assets/stock_images/corporate_security_m_e607b3e0.jpg";
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -15,7 +15,7 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/85 to-background/90" />
       
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-foreground mb-6">
