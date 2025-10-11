@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Logo from "./Logo";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <Logo variant="full" />
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-4">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -44,6 +45,7 @@ export default function Navigation() {
             >
               Get Started
             </Button>
+            <ThemeToggle />
           </div>
 
           <Button
@@ -78,6 +80,9 @@ export default function Navigation() {
             >
               Get Started
             </Button>
+            <div className="flex justify-center pt-2">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       )}
