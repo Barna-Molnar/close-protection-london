@@ -51,10 +51,10 @@ export default function Services() {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="hover-elevate" data-testid={`card-service-${index}`}>
+              <Card key={index} className="card-hover-modern-light" data-testid={`card-service-${index}`}>
                 <CardHeader>
                   <div className="mb-4">
-                    <IconComponent className="w-10 h-10 text-primary" strokeWidth={1.5} />
+                    <IconComponent className="w-10 h-10 text-primary icon-hover-modern" strokeWidth={1.5} />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>

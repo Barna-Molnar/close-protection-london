@@ -32,7 +32,7 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm font-medium text-foreground hover-elevate active-elevate-2 px-3 py-2 rounded-md transition-colors"
+                className="text-sm font-medium text-foreground nav-hover-modern px-3 py-2 rounded-md"
                 data-testid={`link-${item.id}`}
               >
                 {item.label}
@@ -41,6 +41,7 @@ export default function Navigation() {
             <Button
               onClick={() => scrollToSection("contact")}
               size="sm"
+              className="btn-hover-modern-light"
               data-testid="button-cta-nav"
             >
               Get Started
@@ -67,7 +68,7 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left text-sm font-medium text-foreground hover-elevate active-elevate-2 px-3 py-2 rounded-md"
+                className="block w-full text-left text-sm font-medium text-foreground nav-hover-modern px-3 py-2 rounded-md"
                 data-testid={`link-mobile-${item.id}`}
               >
                 {item.label}
@@ -75,7 +76,7 @@ export default function Navigation() {
             ))}
             <Button
               onClick={() => scrollToSection("contact")}
-              className="w-full mt-2"
+              className="w-full mt-2 btn-hover-modern-light"
               data-testid="button-cta-nav-mobile"
             >
               Get Started

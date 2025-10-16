@@ -20,7 +20,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-foreground nav-hover-modern"
                   data-testid="link-footer-services"
                 >
                   Services
@@ -29,7 +29,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-foreground nav-hover-modern"
                   data-testid="link-footer-about"
                 >
                   About
@@ -38,7 +38,7 @@ export default function Footer() {
               <li>
                 <button
                   onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-muted-foreground hover:text-foreground nav-hover-modern"
                   data-testid="link-footer-contact"
                 >
                   Contact

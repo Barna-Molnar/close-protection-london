@@ -41,7 +41,7 @@ export default function About() {
                 </div>
               </div>
 
-              <Card className="p-6">
+              <Card className="p-6 card-hover-modern-light">
                 <div className="flex items-baseline gap-4">
                   <div>
                     <div className="text-4xl font-bold text-primary" data-testid="text-years-experience">15+</div>

@@ -29,7 +29,7 @@ export default function Hero() {
           <Button
             size="lg"
             onClick={scrollToContact}
-            className="text-base"
+            className="text-base btn-hover-modern"
             data-testid="button-hero-consultation"
           >
             Request Consultation
@@ -41,7 +41,7 @@ export default function Hero() {
               const element = document.getElementById("services");
               if (element) element.scrollIntoView({ behavior: "smooth" });
             }}
-            className="text-base bg-background/20 backdrop-blur-sm border-foreground/20 text-foreground hover:bg-background/30"
+            className="text-base bg-background/20 backdrop-blur-sm border-foreground/20 text-foreground hover:bg-background/30 btn-hover-modern-light"
             data-testid="button-hero-services"
           >
             Our Services
