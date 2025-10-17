@@ -29,7 +29,7 @@ export default function Hero() {
           <Button
             size="lg"
             onClick={scrollToContact}
-            className="text-base btn-hover-modern"
+            className="text-base btn-hover-modern-light"
             data-testid="button-hero-consultation"
           >
             Request Consultation

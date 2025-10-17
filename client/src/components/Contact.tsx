@@ -87,7 +87,7 @@ export default function Contact() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg" 
-                className="flex-1 btn-hover-modern"
+                className="flex-1 btn-hover-modern-light"
                 onClick={() => window.open('tel:+442012345678', '_self')}
                 data-testid="button-call-now"
               >
