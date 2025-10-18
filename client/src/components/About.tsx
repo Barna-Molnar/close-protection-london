@@ -2,9 +2,13 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import aboutImage from "@assets/stock_images/professional_securit_717af2d8.jpg";
 
-export default function About() {
+type AboutProps = {
+  sectionRef: React.RefObject<HTMLDivElement>;
+}
+export default function About(props: AboutProps) {
+  const { sectionRef } = props;
   return (
-    <section id="about" className="py-20 md:py-32 bg-muted/30">
+    <section id="about" className="py-20 md:py-32 bg-muted/30" ref={sectionRef}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>

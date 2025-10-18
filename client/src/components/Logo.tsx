@@ -3,11 +3,12 @@ import { Shield } from "lucide-react";
 interface LogoProps {
   variant?: "full" | "compact";
   className?: string;
+  onClick?: () => void;
 }
 
-export default function Logo({ variant = "full", className = "" }: LogoProps) {
+export default function Logo({ variant = "full", className = "", onClick }: LogoProps) {
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
+    <div className={`flex items-center gap-2 cursor-pointer ${className}`} onClick={onClick}>
       <div className="relative">
         <Shield className="w-8 h-8 text-primary" strokeWidth={2} />
       </div>
