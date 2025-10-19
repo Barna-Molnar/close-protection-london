@@ -69,26 +69,18 @@ export default function Footer(props: FooterProps) {
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <a
-                                    href="#"
-                                    className="text-muted-foreground hover:text-foreground nav-hover-modern pb-1"
+                                    href="/privacy-policy"
                                     data-testid="link-privacy"
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        // TODO: Add privacy policy
-                                    }}
+                                    className="text-muted-foreground hover:text-foreground nav-hover-modern pb-1"
                                 >
                                     Privacy Policy
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href="/terms-of-service"
                                     className="text-muted-foreground hover:text-foreground nav-hover-modern pb-1"
                                     data-testid="link-terms"
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        // TODO: Add terms of service
-                                    }}
                                 >
                                     Terms of Service
                                 </a>
