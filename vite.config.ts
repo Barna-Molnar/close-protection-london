@@ -14,6 +14,15 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist"),
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          ui: ['@radix-ui/react-slot', 'lucide-react'],
+          router: ['wouter']
+        }
+      }
+    },
   },
   server: {
     port: 3000,
