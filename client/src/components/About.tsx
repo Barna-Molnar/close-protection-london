@@ -63,8 +63,11 @@ export default function About(props: AboutProps) {
           <div className="relative">
             <img
               src={aboutImage}
-              alt="Professional security services"
+              alt="Professional security team providing executive protection and close protection services in London"
               className="rounded-lg shadow-lg w-full h-auto object-cover"
+              loading="lazy"
+              width="600"
+              height="400"
             />
           </div>
         </div>

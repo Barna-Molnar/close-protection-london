@@ -15,6 +15,8 @@ export default function Hero(props: HeroProps) {
             <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${heroImage})` }}
+                role="img"
+                aria-label="Professional security personnel providing close protection services in London"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/85 to-background/90" />
 
