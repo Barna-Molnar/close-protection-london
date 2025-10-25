@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* LIGHT MODE */
+/* LIGHT MODE COLORS*/
 :root {
-  /* Essential colors for your security website */
+  /* Essential colors for light mode */
   --background: 40 25% 97%;
   --foreground: 220 35% 15%;
   --border: 40 20% 88%;

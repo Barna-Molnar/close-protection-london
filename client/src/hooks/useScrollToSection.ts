@@ -51,6 +51,7 @@ export const useScrollToSection = () => {
         if (section) {
             // TODO: is it a good idea to update the URL hash?
             // and use window for this ?
+            // we may use here a router like react-router or a lightwieght version WOUTER!
             window.history.pushState(null, '', `#${section}`);
         }
     }
