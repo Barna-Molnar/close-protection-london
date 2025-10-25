@@ -168,3 +168,4 @@ If port 3000 is busy, Vite will automatically try the next available port.
 - Monitor bundle sizes in build output
 - Consider adding more manual chunks for large libraries
 - Use `npm run build -- --analyze` to analyze bundle composition
+
