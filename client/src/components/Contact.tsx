@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { config } from "@/config";
 
 type ContactProps = {
     sectionRef: React.RefObject<HTMLDivElement>;
@@ -13,10 +14,10 @@ export default function Contact(props: ContactProps) {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Get in Touch
+            {config.contact.title}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Contact us for a confidential consultation about your security requirements
+            {config.contact.subtitle}
           </p>
         </div>
 
@@ -26,7 +27,7 @@ export default function Contact(props: ContactProps) {
               <CardHeader>
                 <CardTitle className="text-2xl">Get in Touch</CardTitle>
                 <p className="text-muted-foreground">
-                  Contact us directly for a confidential consultation about your security requirements
+                  {config.contact.subtitle}
                 </p>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -35,11 +36,11 @@ export default function Contact(props: ContactProps) {
                   <div>
                     <div className="font-semibold text-lg mb-2">Phone</div>
                     <a 
-                      href="tel:+442012345678" 
+                      href={`tel:${config.contact.contactInfo.phone}`}
                       className="text-primary hover:text-primary/80 transition-colors text-lg font-medium"
                       data-testid="link-phone"
                     >
-                      +44 20 1234 5678
+                      {config.contact.contactInfo.phone}
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">
                       Available 24/7 for emergency response
@@ -52,11 +53,11 @@ export default function Contact(props: ContactProps) {
                   <div>
                     <div className="font-semibold text-lg mb-2">Email</div>
                     <a 
-                      href="mailto:contact@adamroszkopsecurity.com" 
+                      href={`mailto:${config.contact.contactInfo.email}`}
                       className="text-primary hover:text-primary/80 transition-colors text-lg font-medium"
                       data-testid="link-email"
                     >
-                      contact@adamroszkopsecurity.com
+                      {config.contact.contactInfo.email}
                     </a>
                     <p className="text-sm text-muted-foreground mt-1">
                       We respond within 2 hours during business hours
@@ -68,7 +69,7 @@ export default function Contact(props: ContactProps) {
                   <MapPin className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <div className="font-semibold text-lg mb-2">Location</div>
-                    <div className="text-foreground text-lg">London, United Kingdom</div>
+                    <div className="text-foreground text-lg">{config.contact.contactInfo.location}</div>
                     <p className="text-sm text-muted-foreground mt-1">
                       Serving clients across London and surrounding areas
                     </p>
@@ -80,8 +81,8 @@ export default function Contact(props: ContactProps) {
                   <div>
                     <div className="font-semibold text-lg mb-2">Business Hours</div>
                     <div className="text-foreground">
-                      <div>Monday - Friday: 9:00 AM - 6:00 PM</div>
-                      <div>Emergency Response: 24/7</div>
+                      <div>{config.contact.contactInfo.businessHours.weekdays}</div>
+                      <div>{config.contact.contactInfo.businessHours.emergency}</div>
                     </div>
                   </div>
                 </div>
@@ -92,7 +93,7 @@ export default function Contact(props: ContactProps) {
               <Button 
                 size="lg" 
                 className="flex-1 btn-hover-modern-light"
-                onClick={() => window.open('tel:+442012345678', '_self')}
+                onClick={() => window.open(`tel:${config.contact.contactInfo.phone}`, '_self')}
                 data-testid="button-call-now"
               >
                 <Phone className="mr-2 h-5 w-5 icon-hover-modern" />
@@ -102,7 +103,7 @@ export default function Contact(props: ContactProps) {
                 size="lg" 
                 variant="outline"
                 className="flex-1 btn-hover-modern-light"
-                onClick={() => window.open('mailto:contact@adamroszkopsecurity.com', '_self')}
+                onClick={() => window.open(`mailto:${config.contact.contactInfo.email}`, '_self')}
                 data-testid="button-email-us"
               >
                 <Mail className="mr-2 h-5 w-5 icon-hover-modern" />
@@ -114,15 +115,15 @@ export default function Contact(props: ContactProps) {
           <div className="space-y-6">
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="pt-6">
-                <h3 className="font-semibold text-xl mb-4">24/7 Emergency Response</h3>
+                <h3 className="font-semibold text-xl mb-4">{config.contact.contactInfo.emergencyResponse.title}</h3>
                 <p className="text-primary-foreground/90 mb-4">
-                  For urgent security matters, contact us immediately. We provide round-the-clock emergency response services with rapid deployment capabilities.
+                  {config.contact.contactInfo.emergencyResponse.description}
                 </p>
                 <Button 
                   variant="secondary" 
                   size="lg"
                   className="w-full btn-hover-modern-light"
-                  onClick={() => window.open('tel:+442012345678', '_self')}
+                  onClick={() => window.open(`tel:${config.contact.contactInfo.phone}`, '_self')}
                 >
                   <Phone className="mr-2 h-5 w-5 icon-hover-modern" />
                   Emergency Hotline
@@ -132,30 +133,18 @@ export default function Contact(props: ContactProps) {
 
             <Card className="card-hover-modern-light">
               <CardHeader>
-                <CardTitle className="text-lg">Why Choose Us?</CardTitle>
+                <CardTitle className="text-lg">{config.contact.whyChooseUs.title}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <div className="font-medium">Licensed & Certified</div>
-                    <div className="text-sm text-muted-foreground">SIA licensed professionals with advanced certifications</div>
+                {config.contact.whyChooseUs.items.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
+                    <div>
+                      <div className="font-medium">{item.title}</div>
+                      <div className="text-sm text-muted-foreground">{item.description}</div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <div className="font-medium">Discrete Service</div>
-                    <div className="text-sm text-muted-foreground">Confidential and professional approach to all operations</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <div>
-                    <div className="font-medium">Rapid Response</div>
-                    <div className="text-sm text-muted-foreground">Quick deployment and immediate threat assessment</div>
-                  </div>
-                </div>
+                ))}
               </CardContent>
             </Card>
           </div>

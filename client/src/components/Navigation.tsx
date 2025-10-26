@@ -3,7 +3,8 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
-import { SectionId, navItems } from "@/hooks/useScrollToSection";
+import { SectionId } from "@/hooks/useScrollToSection";
+import { config } from "@/config";
 
 type NavigationProps = {
     scrollToSection: (section: SectionId) => void;
@@ -17,8 +18,6 @@ export default function Navigation(props: NavigationProps) {
         setMobileMenuOpen(false);
     };
 
-   
-
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border" >
             <div className="max-w-7xl mx-auto px-6" >
@@ -26,7 +25,7 @@ export default function Navigation(props: NavigationProps) {
                     <Logo variant="full" onClick={() => onNavigationClick("home")} />
 
                     <div className="hidden md:flex items-center gap-4">
-                        {navItems.map((item) => (
+                        {config.navigation.items.map((item) => (
                             <a
                                 key={item.id}
                                 href={`#${item.id}`}
@@ -34,7 +33,7 @@ export default function Navigation(props: NavigationProps) {
                                 className="text-sm font-medium text-foreground nav-hover-modern px-3 py-2 rounded-md"
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    onNavigationClick(item.id);
+                                    onNavigationClick(item.id as SectionId);
                                 }}
                             >
                                 {item.label}
@@ -46,7 +45,7 @@ export default function Navigation(props: NavigationProps) {
                             className="btn-hover-modern-light"
                             data-testid="button-cta-nav"
                         >
-                            Get Started
+                            {config.navigation.ctaButton}
                         </Button>
                         <ThemeToggle />
                     </div>
@@ -69,13 +68,13 @@ export default function Navigation(props: NavigationProps) {
             {mobileMenuOpen && (
                 <div className="md:hidden border-t border-border bg-background">
                     <div className="px-6 py-4 space-y-2">
-                        {navItems.map((item) => (
+                        {config.navigation.items.map((item) => (
                             <a
                                 key={item.id}
                                 href={`#${item.id}`}
                                 onClick={(e) => {
                                     e.preventDefault();
-                                    onNavigationClick(item.id);
+                                    onNavigationClick(item.id as SectionId);
                                 }}
                                 className="block w-full text-left text-sm font-medium text-foreground nav-hover-modern px-3 py-2 rounded-md"
                                 data-testid={`link-mobile-${item.id}`}
@@ -88,7 +87,7 @@ export default function Navigation(props: NavigationProps) {
                             className="w-full mt-2 btn-hover-modern-light"
                             data-testid="button-cta-nav-mobile"
                         >
-                            Get Started
+                            {config.navigation.ctaButton}
                         </Button>
                         <div className="flex justify-center pt-2">
                             <ThemeToggle />
