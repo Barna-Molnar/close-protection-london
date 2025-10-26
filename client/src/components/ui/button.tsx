@@ -22,9 +22,8 @@ const buttonVariants = classVarianceAuthority(
         // Add a transparent border so that when someone toggles a border on later, it doesn't shift layout/size.
         ghost: "border border-transparent",
       },
-      // Heights are set as "min" heights, because sometimes Ai will place large amount of content
-      // inside buttons. With a min-height they will look appropriate with small amounts of content,
-      // but will expand to fit large amounts of content.
+      // Heights use min-height so buttons have consistent sizing with short text,
+      // but can expand vertically to fit longer text content without breaking layout.
       size: {
         default: "min-h-9 px-4 py-2",
         sm: "min-h-8 rounded-md px-3 text-xs",
@@ -60,3 +59,21 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button"
 
 export { buttonVariants, Button }
+
+/**
+ * Button Component
+ * 
+ * A versatile button with multiple style variants (default, destructive, outline, secondary, ghost)
+ * and sizes (default, sm, lg, icon).
+ * 
+ * The `asChild` prop allows this button to render as ANY element while keeping the button styles.
+ * This is useful when you need a link or custom element that looks like a button.
+ * 
+ * Slot (from Radix UI): A wrapper that passes props to its child without creating extra DOM elements.
+ * When asChild=true, the button merges its styles into the child element instead of wrapping it.
+ * 
+ * Usage:
+ * <Button>Normal Button</Button>
+ * <Button asChild><a href="/page">Link as Button</a></Button>
+ * <Button variant="destructive">Delete</Button>
+ */
