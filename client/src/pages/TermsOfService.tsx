@@ -46,7 +46,7 @@ export default function TermsOfService() {
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <p>
-                                By accessing the Adam Roszkop Security website or engaging our services, you agree to these Terms of Service.
+                                By accessing the AB Vip Risk Management website or engaging our services, you agree to these Terms of Service.
                                 If you do not agree, please discontinue use immediately. We may update these Terms periodically.
                             </p>
                         </CardContent>
@@ -178,14 +178,14 @@ export default function TermsOfService() {
                         <CardContent className="space-y-3">
                             <p>For any questions or legal inquiries, please contact:</p>
                             <div className="bg-muted/30 p-4 rounded-lg">
-                                <p><strong>Adam Roszkop Security</strong></p>
+                                <p><strong>AB Vip Risk Management</strong></p>
                                 <p>
                                     Email:{" "}
                                     <a
-                                        href="mailto:legal@adamroszkopsecurity.co.uk"
+                                        href="mailto:contact@adamroszkopsecurity.com"
                                         className="text-primary hover:underline"
                                     >
-                                        legal@adamroszkopsecurity.co.uk
+                                        contact@adamroszkopsecurity.com
                                     </a>
                                 </p>
                                 <p>London, United Kingdom</p>

@@ -48,7 +48,7 @@ export default function PrivacyPolicy() {
                         </CardHeader>
                         <CardContent className="space-y-4">
                             <p>
-                                Adam Roszkop Security (“we”, “our”, or “us”) respects your privacy
+                                AB Vip Risk Management ("we", "our", or "us") respects your privacy
                                 and is committed to protecting the personal information you share
                                 with us. This policy explains how we handle any information
                                 collected through our website.
@@ -167,14 +167,14 @@ export default function PrivacyPolicy() {
                                 rights, please contact:
                             </p>
                             <div className="bg-muted/30 p-4 rounded-lg">
-                                <p><strong>Adam Roszkop Security</strong></p>
+                                <p><strong>AB Vip Risk Management</strong></p>
                                 <p>
                                     Email:{" "}
                                     <a
-                                        href="mailto:privacy@adamroszkopsecurity.co.uk"
+                                        href="mailto:contact@adamroszkopsecurity.com"
                                         className="text-primary hover:underline"
                                     >
-                                        privacy@adamroszkopsecurity.co.uk
+                                        contact@adamroszkopsecurity.com
                                     </a>
                                 </p>
                             </div>
