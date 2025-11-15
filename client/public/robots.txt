@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://adamroszkopsecurity.co.uk/sitemap.xml
+Sitemap: https://www.abvip.co.uk/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
