@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <!-- Shield icon path from lucide-react (exact match) -->
+  <path 
+    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" 
+    stroke="hsl(45, 75%, 52%)" 
+    stroke-width="2" 
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- AB text perfectly centered in shield -->
+  <text 
+    x="12" 
+    y="12" 
+    font-family="system-ui, -apple-system, sans-serif" 
+    font-size="7" 
+    font-weight="bold" 
+    fill="hsl(45, 75%, 52%)" 
+    text-anchor="middle" 
+    dominant-baseline="middle"
+    letter-spacing="0.3"
+  >
+    AB
+  </text>
+</svg>
+
