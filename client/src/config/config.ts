@@ -3,6 +3,14 @@ import { Shield, Lock, UserCheck, Building, Search, Home } from "lucide-react";
 import heroImage from "@assets/stock_images/corporate_security_m_e607b3e0.jpg";
 import aboutImage from "@assets/stock_images/professional_securit_717af2d8.jpg";
 
+
+const navigation = {
+    items: [
+        { id: "services", label: "Services" },
+        { id: "about", label: "About" },
+        { id: "contact", label: "Contact Us" }
+    ],
+}
 export const config: SiteConfig = {
     meta: {
         businessName: "AB Vip Risk Management",
@@ -50,14 +58,7 @@ export const config: SiteConfig = {
         }
     },
 
-    navigation: {
-        items: [
-            { id: "services", label: "Services" },
-            { id: "about", label: "About" },
-            { id: "contact", label: "Contact" }
-        ],
-        ctaButton: "Get Started"
-    },
+    navigation: navigation,
 
     hero: {
         title: "Close Protection Specialists You can Trust",
@@ -163,11 +164,7 @@ export const config: SiteConfig = {
 
     footer: {
         description: "Professional international security solutions. Discreet, reliable, and experienced.",
-        quickLinks: [
-            { id: "services", label: "Services" },
-            { id: "about", label: "About" },
-            { id: "contact", label: "Contact" }
-        ],
+        quickLinks: navigation.items,
         legalLinks: [
             { label: "Privacy Policy", href: "/privacy-policy" },
             { label: "Terms of Service", href: "/terms-of-service" }

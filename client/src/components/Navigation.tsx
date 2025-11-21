@@ -39,14 +39,14 @@ export default function Navigation(props: NavigationProps) {
                                 {item.label}
                             </a>
                         ))}
-                        <Button
+                        {/* <Button
                             onClick={() => onNavigationClick('contact')}
                             size="sm"
                             className="btn-hover-modern-light"
                             data-testid="button-cta-nav"
                         >
                             {config.navigation.ctaButton}
-                        </Button>
+                        </Button> */}
                         <ThemeToggle />
                     </div>
 

@@ -70,13 +70,10 @@ export default function Contact(props: ContactProps) {
                   <div>
                     <div className="font-semibold text-lg mb-2">Location</div>
                     <div className="text-foreground text-lg">{config.contact.contactInfo.location}</div>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      Serving clients across London and surrounding areas
-                    </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                {/* <div className="flex items-start gap-4">
                   <Clock className="w-6 h-6 text-primary mt-1" />
                   <div>
                     <div className="font-semibold text-lg mb-2">Business Hours</div>
@@ -85,7 +82,7 @@ export default function Contact(props: ContactProps) {
                       <div>{config.contact.contactInfo.businessHours.emergency}</div>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
 

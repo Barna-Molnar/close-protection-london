@@ -143,7 +143,7 @@ export interface SiteConfig {
   colors: ColorScheme;
   navigation: {
     items: NavItem[];
-    ctaButton: string;
+    ctaButton?: string;
   };
   hero: HeroConfig;
   about: AboutConfig;
