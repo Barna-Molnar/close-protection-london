@@ -131,8 +131,8 @@ export const config: SiteConfig = {
         title: "Get in Touch",
         subtitle: "Contact us for a confidential consultation about your security requirements",
         contactInfo: {
-            phone: "+44 20 1234 5678",
-            email: "contact@adamroszkopsecurity.com",
+            phone: "+44 7787 431 870",
+            email: "-",
             location: "London, United Kingdom",
             businessHours: {
                 weekdays: "Monday - Friday: 9:00 AM - 6:00 PM",
