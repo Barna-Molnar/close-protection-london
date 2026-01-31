@@ -132,7 +132,7 @@ export const config: SiteConfig = {
         subtitle: "Contact us for a confidential consultation about your security requirements",
         contactInfo: {
             phone: "+44 7787 431 870",
-            email: "-",
+            email: "info@abvip.co.uk",
             location: "London, United Kingdom",
             businessHours: {
                 weekdays: "Monday - Friday: 9:00 AM - 6:00 PM",
