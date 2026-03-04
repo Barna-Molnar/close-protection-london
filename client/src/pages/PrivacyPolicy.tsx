@@ -1,11 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Shield, Eye, Database, Lock, Mail } from "lucide-react";
+import SEO from "@/components/SEO";
 import { Link } from "wouter";
 
 export default function PrivacyPolicy() {
     return (
         <div className="min-h-screen bg-background">
+            <SEO
+                title="Privacy Policy | AB Vip Risk Management"
+                description="Read the AB Vip Risk Management privacy policy for details on data handling, retention, and your UK GDPR rights."
+                canonicalPath="/privacy-policy"
+            />
             {/* Header */}
             <div className="bg-muted/30 border-b border-border">
                 <div className="max-w-4xl mx-auto px-6 py-8">
@@ -24,12 +30,7 @@ export default function PrivacyPolicy() {
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground">
-                        Last updated:{" "}
-                        {new Date().toLocaleDateString("en-GB", {
-                            year: "numeric",
-                            month: "long",
-                            day: "numeric",
-                        })}
+                        Last updated: 4 March 2026
                     </p>
                 </div>
             </div>
@@ -171,10 +172,10 @@ export default function PrivacyPolicy() {
                                 <p>
                                     Email:{" "}
                                     <a
-                                        href="mailto:contact@adamroszkopsecurity.com"
+                                        href="mailto:info@abvip.co.uk"
                                         className="text-primary hover:underline"
                                     >
-                                        contact@adamroszkopsecurity.com
+                                        info@abvip.co.uk
                                     </a>
                                 </p>
                             </div>

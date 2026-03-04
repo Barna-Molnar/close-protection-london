@@ -1,16 +1,3 @@
 User-agent: *
 Allow: /
-
-# Sitemap
 Sitemap: https://www.abvip.co.uk/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
-# Disallow: /private/
-
-# Allow all other content
-Allow: /privacy-policy
-Allow: /terms-of-service

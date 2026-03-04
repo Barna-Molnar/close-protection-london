@@ -18,6 +18,20 @@ export default function Footer(props: FooterProps) {
                         <p className="text-sm text-muted-foreground">
                             {config.footer.description}
                         </p>
+                        <div className="mt-4 space-y-1 text-sm text-muted-foreground">
+                            <p>{config.meta.businessName}</p>
+                            <p>{config.contact.contactInfo.location}</p>
+                            <p>
+                                <a href={`tel:${config.contact.contactInfo.phone}`} className="hover:text-foreground">
+                                    {config.contact.contactInfo.phone}
+                                </a>
+                            </p>
+                            <p>
+                                <a href={`mailto:${config.contact.contactInfo.email}`} className="hover:text-foreground">
+                                    {config.contact.contactInfo.email}
+                                </a>
+                            </p>
+                        </div>
                     </div>
 
                     <div>
