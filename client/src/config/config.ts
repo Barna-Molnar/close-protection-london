@@ -139,7 +139,7 @@ export const config: SiteConfig = {
                 emergency: "Emergency Response: 24/7"
             },
             emergencyResponse: {
-                title: "24/7 Emergency Response",
+                title: "Urgent Inquiries",
                 description: "For urgent security matters, contact us immediately. We provide round-the-clock emergency response services with rapid deployment capabilities."
             }
         },
